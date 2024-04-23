@@ -1,2 +1,12 @@
 import 'package:flutter/material.dart';
-v
+
+import 'screen.dart';
+void main()
+{
+  runApp(
+    MaterialApp(
+      home: Scrn1(
+      )
+    )
+  );
+}
