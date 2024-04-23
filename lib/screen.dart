@@ -48,7 +48,7 @@ class Scrn1 extends StatelessWidget {
                   Icons.phone,
                   color: Colors.teal,
                 ),
-                SizedBox(height: 20.0),
+                SizedBox(width: 20.0),
                 Text(
                   '+22996119149',
                   style: TextStyle(
