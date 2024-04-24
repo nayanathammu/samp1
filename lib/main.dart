@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-import 'screen.dart';
+import 'login.dart';
 void main()
 {
   runApp(
     MaterialApp(
-      home: Scrn1(
+      home: login1(
       )
     )
   );
