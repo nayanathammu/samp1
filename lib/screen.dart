@@ -1,11 +1,18 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
+import 'package:samp1/next.dart';
 
 class Scrn1 extends StatelessWidget {
-  const Scrn1({super.key});
-
-  @override
+   Scrn1({super.key,required this.username,required  this.firstname,required this.lastname,
+     required this.email,required this.password,required this.phonenumber,});
+  String username;
+  String firstname;
+String lastname;
+   String email;
+   String password;
+   String phonenumber;
+   @override
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.teal,
@@ -17,48 +24,32 @@ class Scrn1 extends StatelessWidget {
               radius: 100,
             ),
           ),
-          Center(
-            child: Text(
-              'Crepin Fadjo',
-              style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 30.0,
-                  fontWeight: FontWeight.bold,
-                  fontFamily: 'Roboto'),
-            ),
-          ),
-          Center(
-            child: Text(
-              'FLUTTER DEVELOPER',
-              style: TextStyle(
-                  color: Colors.white54,
-                  fontSize: 15.0,
-                  decoration: TextDecoration.underline,
-                  decorationColor: Colors.white),
-            ),
-          ),
-          SizedBox(height: 20),
+          SizedBox(height: 20.0),
           Container(
             height: 50,
             width: 500,
             color: Colors.white,
-            child: Row(
-              children: [
-                Icon(
-                  Icons.phone,
-                  color: Colors.teal,
-                ),
-                SizedBox(width: 20.0),
-                Text(
-                  '+22996119149',
-                  style: TextStyle(
-                    color: Colors.teal,
-                    fontSize: 20,
-                  ),
-                ),
-                SizedBox(width: 20.0),
-
-              ],
+            child: Text(
+              username,
+              style: TextStyle(
+                  color: Colors.black45,
+                  fontSize: 30.0,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'Roboto'),
+     ),
+          ),
+          SizedBox(height: 20.0),
+          Container(
+            height: 50,
+            width: 500,
+            color: Colors.white,
+            child: Text(
+              firstname,
+              style: TextStyle(
+                  color: Colors.black45,
+                  fontSize: 30.0,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'Roboto'),
             ),
           ),
           SizedBox(height: 20.0),
@@ -66,20 +57,75 @@ class Scrn1 extends StatelessWidget {
             height: 50,
             width: 500,
             color: Colors.white,
-            child: Row(
-              children: [
-                Icon(
-                  Icons.email,
-                  color: Colors.teal,
-                ),
-                SizedBox(width: 20.0),
-                Text(
-                  'fadcrepin@gmail.com',
-                  style: TextStyle(color: Colors.teal, fontSize: 20),
-                ),
-              ],
+            child: Text(
+              lastname,
+              style: TextStyle(
+                  color: Colors.black45,
+                  fontSize: 30.0,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'Roboto'),
             ),
           ),
-        ]));
+          SizedBox(height: 20.0),
+          Container(
+            height: 50,
+            width: 500,
+            color: Colors.white,
+            child: Text(
+              email,
+              style: TextStyle(
+                  color: Colors.black45,
+                  fontSize: 30.0,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'Roboto'),
+            ),
+          ),
+          SizedBox(height: 20.0),
+          Container(
+            height: 50,
+            width: 500,
+            color: Colors.white,
+            child: Text(
+              password,
+              style: TextStyle(
+                  color: Colors.black45,
+                  fontSize: 30.0,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'Roboto'),
+            ),
+          ),
+          SizedBox(height: 20.0),
+          Container(
+            height: 50,
+            width: 500,
+            color: Colors.white,
+            child: Text(
+              phonenumber,
+              style: TextStyle(
+                  color: Colors.black45,
+                  fontSize: 30.0,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'Roboto'),
+            ),
+          ),
+          SizedBox(height: 20.0),
+          ElevatedButton(onPressed: (){Navigator.push(context,MaterialPageRoute(builder: (context)=>next1(),));},
+            style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.orangeAccent
+            ),
+            child: Text(
+              'Next',
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 30.0,
+                fontWeight: FontWeight.bold,
+                fontFamily: 'ROBOTO',
+              ),
+            ) ,
+          ),
+              ],
+            ),
+          );
+
   }
 }

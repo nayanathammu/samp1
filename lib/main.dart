@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:samp1/login.dart';
 
-import 'login.dart';
+import 'next.dart';
 void main()
 {
   runApp(
